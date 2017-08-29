@@ -1,14 +1,13 @@
 package com.absion.test;
 
 import com.absion.android.EnemyGenerator;
+import com.absion.models.Monster;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import models.Monster;
 
 /**
  *
@@ -43,7 +42,7 @@ public class EnemyGeneratorTest {
         System.out.println("createCanineMonster");
         int areaLevel = 26;
         String areaType = "TestArea";
-        Monster dog = new Monster();
+        Monster dog;
         dog = EnemyGenerator.createCanineMonster(areaLevel, areaType);
         System.out.println(dog.getAge() + " " + dog.getCharisma() + " " + dog.getName() + " " + dog.getSelectedRank() + " " + dog.getLevel() + " " + dog.getSelectedGender());
         

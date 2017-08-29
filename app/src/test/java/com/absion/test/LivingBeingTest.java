@@ -1,12 +1,12 @@
 package com.absion.test;
 
+import com.absion.models.LivingBeing;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import models.LivingBeing;
 
 import static org.junit.Assert.assertEquals;
 
@@ -68,8 +68,8 @@ public class LivingBeingTest {
     public void testGetSelectedAlignment() {
         System.out.println("getSelectedAlignment");
         LivingBeing instance = new LivingBeing();
-        LivingBeing.Alingment expResult = null;
-        LivingBeing.Alingment result = instance.getSelectedAlignment();
+        LivingBeing.Alignment expResult = null;
+        LivingBeing.Alignment result = instance.getSelectedAlignment();
         assertEquals(expResult, result);
         
     }
@@ -80,7 +80,7 @@ public class LivingBeingTest {
     @Test
     public void testSetSelectedAlignment() {
         System.out.println("setSelectedAlignment");
-        LivingBeing.Alingment selectedAlignment = null;
+        LivingBeing.Alignment selectedAlignment = null;
         LivingBeing instance = new LivingBeing();
         instance.setSelectedAlignment(selectedAlignment);
         

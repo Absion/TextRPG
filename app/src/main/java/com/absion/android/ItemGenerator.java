@@ -1,9 +1,9 @@
 package com.absion.android;
 
-import java.util.Random;
+import com.absion.models.Item;
+import com.absion.models.Weapon;
 
-import models.Item;
-import models.Weapon;
+import java.util.Random;
 
 /**
  *
@@ -24,7 +24,7 @@ public class ItemGenerator {
 
         Weapon legendaryWeapon = new Weapon();
 
-        legendaryWeapon.setIsItKeyItem(false);
+        legendaryWeapon.setItKeyItem(false);
         legendaryWeapon.setSelectedRank(Item.ItemRank.LEGENDARY);
 
         //Selects the Type of weapon at random

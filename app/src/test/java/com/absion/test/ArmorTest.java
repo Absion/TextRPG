@@ -1,13 +1,13 @@
 package com.absion.test;
 
+import com.absion.models.Armor;
+import com.absion.models.Item;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import models.Armor;
-import models.Item;
 
 import static org.junit.Assert.assertTrue;
 

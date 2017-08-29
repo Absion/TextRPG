@@ -1,10 +1,10 @@
-package models;
+package com.absion.models;
 
 /**
  *
  * @author Absion
  */
-public class Weapon extends KeyItem {
+public class Weapon extends Item {
     
     private int damage;
     

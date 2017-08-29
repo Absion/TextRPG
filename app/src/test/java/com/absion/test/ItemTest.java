@@ -1,12 +1,12 @@
 package com.absion.test;
 
+import com.absion.models.Item;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import models.Item;
 
 import static org.junit.Assert.assertEquals;
 
@@ -50,6 +50,27 @@ public class ItemTest {
     }
 
     /**
+     * gets if keyitem is ture or not
+     * @throws Exception
+     */
+    @Test
+    public void isItKeyItem() throws Exception {
+
+    }
+
+    /**
+     * Test setting key item boolean value
+     * @throws Exception
+     */
+    @Test
+    public void setItKeyItem() throws Exception {
+        System.out.println("set Is it key item");
+        Boolean keyItem = true;
+        Item instance = new Item();
+        instance.setItKeyItem(keyItem);
+    }
+
+    /**
      * Test of setItemName method, of class Item.
      */
     @Test
@@ -69,8 +90,8 @@ public class ItemTest {
         System.out.println("getItemWeight");
         Item instance = new Item();
         instance.setItemWeight(70);
-        Integer expResult = 70;
-        Integer result = instance.getItemWeight();
+        int expResult = 70;
+        int result = instance.getItemWeight();
         assertEquals(expResult, result);
         
     }
@@ -81,7 +102,7 @@ public class ItemTest {
     @Test
     public void testSetItemWeight() {
         System.out.println("setItemWeight");
-        Integer itemWeight = null;
+        int itemWeight = 0;
         Item instance = new Item();
         instance.setItemWeight(itemWeight);
         
@@ -95,8 +116,8 @@ public class ItemTest {
         System.out.println("getItemHealth");
         Item instance = new Item();
         instance.setItemHealth(0);
-        Integer expResult = 0;
-        Integer result = instance.getItemHealth();
+        int expResult = 0;
+        int result = instance.getItemHealth();
         assertEquals(expResult, result);
         
     }
@@ -107,7 +128,7 @@ public class ItemTest {
     @Test
     public void testSetItemHealth() {
         System.out.println("setItemHealth");
-        Integer itemHealth = null;
+        int itemHealth = 0;
         Item instance = new Item();
         instance.setItemHealth(itemHealth);
         
@@ -121,8 +142,8 @@ public class ItemTest {
         System.out.println("getItemValue");
         Item instance = new Item();
         instance.setItemValue(1000);
-        Integer expResult = 1000;
-        Integer result = instance.getItemValue();
+        int expResult = 1000;
+        int result = instance.getItemValue();
         assertEquals(expResult, result);
         
     }
@@ -133,7 +154,7 @@ public class ItemTest {
     @Test
     public void testSetItemValue() {
         System.out.println("setItemValue");
-        Integer itemValue = null;
+        int itemValue = 0;
         Item instance = new Item();
         instance.setItemValue(itemValue);
         
@@ -218,5 +239,6 @@ public class ItemTest {
         instance.setSelectedRank(selectedRank);
         
     }
-    
+
+
 }

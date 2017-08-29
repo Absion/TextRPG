@@ -1,12 +1,12 @@
 package com.absion.test;
 
+import com.absion.models.Monster;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import models.Monster;
 
 import static org.junit.Assert.assertEquals;
 

@@ -1,12 +1,12 @@
 package com.absion.test;
 
+import com.absion.models.NonPlayerCharacter;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import models.NonPlayerCharacter;
 
 import static org.junit.Assert.assertEquals;
 

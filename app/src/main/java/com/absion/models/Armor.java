@@ -1,10 +1,10 @@
-package models;
+package com.absion.models;
 
 /**
- *
+ *The model for every piece of armor in the game
  * @author Absion
  */
-public class Armor extends KeyItem {
+public class Armor extends Item {
 
     public enum ArmorClass {
         STEEL, LEATHER, SCALE, PLATE, CLOTH
@@ -20,7 +20,7 @@ public class Armor extends KeyItem {
 
     /**
      * Getter for the armor classification
-     * @return
+     * @return armorClassification
      */
     public ArmorClass getArmorClassification() {
         return armorClassification;
@@ -28,7 +28,7 @@ public class Armor extends KeyItem {
 
     /**
      * Armor classification setter
-     * @param armorClassification
+     * @param armorClassification The type of armor i.e.: STEEL, LEATHER, SCALE, PLATE, CLOTH
      */
     public void setArmorClassification(ArmorClass armorClassification) {
         this.armorClassification = armorClassification;
@@ -36,7 +36,7 @@ public class Armor extends KeyItem {
 
     /**
      * Getter for the body part that the item will handle
-     * @return
+     * @return bodyClassification
      */
     public BodyPart getBodyClassification() {
         return bodyClassification;
@@ -44,7 +44,8 @@ public class Armor extends KeyItem {
 
     /**
      * Sets the body part for the armor piece
-     * @param bodyClassification
+     * @param bodyClassification The part of the body that the armor fits on i.e: HEAD, NECK, CHEST,
+     *                           HANDS, FINGER, FEET, LEGS, WAIST, WRIST, EAR
      */
     public void setBodyClassification(BodyPart bodyClassification) {
         this.bodyClassification = bodyClassification;
@@ -52,7 +53,7 @@ public class Armor extends KeyItem {
 
     /**
      * Gets the defense given by the armor
-     * @return
+     * @return defense
      */
     public int getDefense() {
         return defense;
@@ -60,7 +61,7 @@ public class Armor extends KeyItem {
 
     /**
      * Sets the defense of the armor
-     * @param defense
+     * @param defense The defense rating of the armor as an integer
      */
     public void setDefense(int defense) {
         this.defense = defense;

@@ -1,19 +1,22 @@
 package com.absion.android;
 
+import com.absion.models.LivingBeing;
+import com.absion.models.Monster;
+
 import java.util.Random;
 
-import models.LivingBeing;
-import models.Monster;
-
 /**
- *
+ * This is the class file that will generate enemies in the game
  * @author Absion
  */
 public class EnemyGenerator {
 
-    
-    
-
+    /**
+     * A random generator for a canine monster
+     * @param areaLevel The level of the area that this monster was found in
+     * @param areaType The type of the area the monster was found in
+     * @return
+     */
     public static Monster createCanineMonster(int areaLevel, String areaType) {
 
         //Random used to create monsters.
@@ -27,7 +30,7 @@ public class EnemyGenerator {
         dog.setAge(rand.nextInt(areaLevel + 5) + 1);
 
         dog.setIsKillable(true);
-        dog.setSelectedAlignment(LivingBeing.Alingment.CHAOTICNEUTRAL);
+        dog.setSelectedAlignment(LivingBeing.Alignment.CHAOTICNEUTRAL);
         dog.setSelectedSize(LivingBeing.Size.MEDIUM);
         dog.setSelectedType(Monster.MonsterType.BEAST);
         dog.setExperience(0);
