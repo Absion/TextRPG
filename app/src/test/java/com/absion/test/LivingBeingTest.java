@@ -212,27 +212,27 @@ public class LivingBeingTest {
     }
 
     /**
-     * Test of getIntelligence method, of class LivingBeing.
+     * Test of getIntellect method, of class LivingBeing.
      */
     @Test
     public void testGetIntelligence() {
-        System.out.println("getIntelligence");
+        System.out.println("getIntellect");
         LivingBeing instance = new LivingBeing();
         int expResult = 0;
-        int result = instance.getIntelligence();
+        int result = instance.getIntellect();
         assertEquals(expResult, result);
         
     }
 
     /**
-     * Test of setIntelligence method, of class LivingBeing.
+     * Test of setIntellect method, of class LivingBeing.
      */
     @Test
     public void testSetIntelligence() {
-        System.out.println("setIntelligence");
+        System.out.println("setIntellect");
         int intelligence = 0;
         LivingBeing instance = new LivingBeing();
-        instance.setIntelligence(intelligence);
+        instance.setIntellect(intelligence);
         
     }
 
@@ -262,27 +262,27 @@ public class LivingBeingTest {
     }
 
     /**
-     * Test of getCharisma method, of class LivingBeing.
+     * Test of getCharm method, of class LivingBeing.
      */
     @Test
     public void testGetCharisma() {
-        System.out.println("getCharisma");
+        System.out.println("getCharm");
         LivingBeing instance = new LivingBeing();
         int expResult = 0;
-        int result = instance.getCharisma();
+        int result = instance.getCharm();
         assertEquals(expResult, result);
         
     }
 
     /**
-     * Test of setCharisma method, of class LivingBeing.
+     * Test of setCharm method, of class LivingBeing.
      */
     @Test
     public void testSetCharisma() {
-        System.out.println("setCharisma");
+        System.out.println("setCharm");
         int charisma = 0;
         LivingBeing instance = new LivingBeing();
-        instance.setCharisma(charisma);
+        instance.setCharm(charisma);
         
     }
 

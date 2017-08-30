@@ -10,7 +10,14 @@ import java.util.LinkedList;
 public class Humanoid extends LivingBeing {
 
     private String history;
+    private Class selectedClass;
+    private HumanType selectedHumanType;
+    private LinkedList<Item> inventory;
+    private LinkedList<Item> equipped;
 
+    /**
+     * Enum defining the classes that a humanoid can be
+     */
     public enum Class {
         WARRIOR, MARKSMAN, CLERIC,
         ROUGE, MAGICIAN, MERCENARY,
@@ -18,16 +25,12 @@ public class Humanoid extends LivingBeing {
         CHILD, ELDER
     }
 
-    private Class selectedClass;
-
+    /**
+     * The Enum defining the existing humanoid races in the game
+     */
     public enum HumanType {
         HUMAN, BEASTMAN, ELF, FAIRY
     }
-
-    private HumanType selectedHumanType;
-
-    LinkedList<Item> inventory;
-    LinkedList<Item> equipped;
 
     /**
      * Gets the history of the current humanoid

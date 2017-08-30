@@ -7,7 +7,9 @@ package com.absion.models;
  */
 public class Consumable extends Item {
 
-
+    /**
+     * Enum containing what type of effect this consumable will have
+     */
     public enum ConsumableType {
         HEALTH, MANA, STRENGTH, WISDOM,
         INTELLIGENCE, DEXTERITY, CONSTITUTION,

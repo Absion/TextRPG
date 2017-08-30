@@ -6,14 +6,22 @@ package com.absion.models;
  */
 public class Armor extends Item {
 
+    /**
+     * Enum holding the material that the armor is made of
+     */
     public enum ArmorClass {
         STEEL, LEATHER, SCALE, PLATE, CLOTH
     }
-    private ArmorClass armorClassification;
-    
+
+    /**
+     * Enum holding the body part that this armor piece fits on
+     */
     public enum BodyPart{
-        HEAD, NECK, CHEST, HANDS, FINGER, FEET, LEGS, WAIST, WRIST, EAR 
+        HEAD, NECK, CHEST, HANDS, FINGER, FEET, LEGS, WAIST, WRIST, EAR
     }
+
+    private ArmorClass armorClassification;
+
     private BodyPart bodyClassification;
     
     int defense;

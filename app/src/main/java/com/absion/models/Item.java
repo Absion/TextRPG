@@ -15,19 +15,22 @@ public class Item {
     private int itemValue;
     private String itemHistory;
     private boolean isItKeyItem;
+    private ItemRank selectedRank;
+    private ElementType selectedElement;
 
-
+    /**
+     * Enum defining the elemental types in the game
+     */
     public enum ElementType {
         FIRE, WIND, WATER, ELECTRIC, EARTH, DARK, LIGHT, BASE
     }
 
-    private ElementType selectedElement;
-
+    /**
+     * The enum defining the ranks that any item in the game can be
+     */
     public enum ItemRank {
         NORMAL, RARE, LEGENDARY, EPIC
     }
-
-    private ItemRank selectedRank;
 
 
     /**

@@ -1,57 +1,59 @@
 package com.absion.models;
 
 /**
+ * Model base for every living thing in the game
  * @author Absion
  */
 public class LivingBeing {
 
-    //ASSIGNS GENDER TO A LIVING BEING
+    /**
+     * Enum defining the gender possibilities in the game
+     */
     public enum Gender {
         MALE, FEMALE, NONGENDER
     }
 
-    private Gender selectedGender;
-
-    //ASSIGNS ALIGNMENT TO A LIVING THING
+    /**
+     * Enum defining the alignments in the game. Describes their morality/outlook
+     */
     public enum Alignment {
         LAWFULNEUTRAL, CHAOTICNEUTRAL, NEUTRAL,
         CHAOTICEVIL, LAWFULEVIL, NEUTRALEVIL,
         LAWFULGOOD, CHAOTICGOOD, NEUTRALGOOD
     }
 
-    private Alignment selectedAlignment;
-
-    //ASSIGNS SIZE TO A LIVING THING
+    /**
+     * Enum defining the sizes creatures in the game can be
+     */
     public enum Size {
         SMALL, MEDIUM, LARGE, GIANT
     }
-
-    private Size selectedSize;
 
     //THE STAT ATTRIBUTES
     private int strength;
     private int wisdom;
     private int dexterity;
     private int constitution;
-    private int intelligence;
+    private int intellect;
     private int luck;
-    private int charisma;
+    private int charm;
+
     private int level;
     private int experience;
-
     private int age;
     private boolean isKillable;
-
     private int health;
     private int mana;
-
+    private Size selectedSize;
+    private Alignment selectedAlignment;
+    private Gender selectedGender;
     private String name;
 
 
     /**
      * Gets the gender of the living thing
      *
-     * @return
+     * @return selectedGender
      */
     public Gender getSelectedGender() {
         return selectedGender;
@@ -60,7 +62,7 @@ public class LivingBeing {
     /**
      * Sets the gender of the being
      *
-     * @param selectedGender
+     * @param selectedGender Enum of the possible genders in game i.e: MALE, FEMALE, NONGENDER
      */
     public void setSelectedGender(Gender selectedGender) {
         this.selectedGender = selectedGender;
@@ -69,7 +71,7 @@ public class LivingBeing {
     /**
      * Gets the alignment of the creature
      *
-     * @return
+     * @return selectedAlignment
      */
     public Alignment getSelectedAlignment() {
         return selectedAlignment;
@@ -78,7 +80,10 @@ public class LivingBeing {
     /**
      * Sets the alignment of the creature
      *
-     * @param selectedAlignment
+     * @param selectedAlignment Enum of the possible alignments in the game i.e: LAWFULNEUTRAL,
+     *                          CHAOTICNEUTRAL, NEUTRAL,
+     *                          CHAOTICEVIL, LAWFULEVIL, NEUTRALEVIL,
+     *                          LAWFULGOOD, CHAOTICGOOD, NEUTRALGOOD
      */
     public void setSelectedAlignment(Alignment selectedAlignment) {
         this.selectedAlignment = selectedAlignment;
@@ -87,7 +92,7 @@ public class LivingBeing {
     /**
      * Gets the Size of the creature
      *
-     * @return
+     * @return selectedSize
      */
     public Size getSelectedSize() {
         return selectedSize;
@@ -96,7 +101,7 @@ public class LivingBeing {
     /**
      * Sets the size of the creature
      *
-     * @param selectedSize
+     * @param selectedSize Enum of the possible sizes in the game i.e: SMALL, MEDIUM, LARGE, GIANT
      */
 
     public void setSelectedSize(Size selectedSize) {
@@ -106,7 +111,7 @@ public class LivingBeing {
     /**
      * Gets the strength of the creature
      *
-     * @return
+     * @return strength
      */
 
     public int getStrength() {
@@ -116,7 +121,7 @@ public class LivingBeing {
     /**
      * Sets the strength of the creature.
      *
-     * @param strength
+     * @param strength int value describing how strong the creature is
      */
 
     public void setStrength(int strength) {
@@ -126,7 +131,7 @@ public class LivingBeing {
     /**
      * Gets wisdom
      *
-     * @return
+     * @return wisdom
      */
 
     public int getWisdom() {
@@ -136,7 +141,7 @@ public class LivingBeing {
     /**
      * Sets the wisdom
      *
-     * @param wisdom
+     * @param wisdom int describing how wise or experienced the creature is
      */
 
     public void setWisdom(int wisdom) {
@@ -146,7 +151,7 @@ public class LivingBeing {
     /**
      * Gets dexterity
      *
-     * @return
+     * @return dexterity
      */
 
     public int getDexterity() {
@@ -156,7 +161,7 @@ public class LivingBeing {
     /**
      * Sets dexterity
      *
-     * @param dexterity
+     * @param dexterity int describing how agile/flexible/skilled the creature is
      */
 
     public void setDexterity(int dexterity) {
@@ -166,7 +171,7 @@ public class LivingBeing {
     /**
      * Gets the constitution of the being
      *
-     * @return
+     * @return constitution
      */
 
     public int getConstitution() {
@@ -176,7 +181,7 @@ public class LivingBeing {
     /**
      * sets the constitution
      *
-     * @param constitution
+     * @param constitution int describing how healthy and robust the creature's body is
      */
 
     public void setConstitution(int constitution) {
@@ -184,29 +189,29 @@ public class LivingBeing {
     }
 
     /**
-     * gets the intelligence of the being
+     * gets the intellect of the being
      *
-     * @return
+     * @return intellect
      */
 
-    public int getIntelligence() {
-        return intelligence;
+    public int getIntellect() {
+        return intellect;
     }
 
     /**
-     * sets the intelligence
+     * sets the intellect
      *
-     * @param intelligence
+     * @param intellect int value describing the amount of facts or knowledge the creature has memorized
      */
 
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
+    public void setIntellect(int intellect) {
+        this.intellect = intellect;
     }
 
     /**
      * gets the luck of the creature
      *
-     * @return
+     * @return luck
      */
 
     public int getLuck() {
@@ -216,7 +221,7 @@ public class LivingBeing {
     /**
      * sets the luck of the creature
      *
-     * @param luck
+     * @param luck int value describing how much fate favors this creature
      */
 
     public void setLuck(int luck) {
@@ -224,29 +229,29 @@ public class LivingBeing {
     }
 
     /**
-     * gets the charisma of the creature
+     * gets the charm of the creature
      *
-     * @return
+     * @return charm
      */
 
-    public int getCharisma() {
-        return charisma;
+    public int getCharm() {
+        return charm;
     }
 
     /**
-     * sets the charisma of the creature
+     * sets the charm of the creature
      *
-     * @param charisma
+     * @param charm int value describing how attractive/charming/cute the creature is
      */
 
-    public void setCharisma(int charisma) {
-        this.charisma = charisma;
+    public void setCharm(int charm) {
+        this.charm = charm;
     }
 
     /**
      * gets the level of the creature
      *
-     * @return
+     * @return level
      */
 
     public int getLevel() {
@@ -256,7 +261,7 @@ public class LivingBeing {
     /**
      * sets the beings level
      *
-     * @param level
+     * @param level int value describing how much over all experience and ability the creature has
      */
 
     public void setLevel(int level) {
@@ -266,7 +271,7 @@ public class LivingBeing {
     /**
      * gets the age
      *
-     * @return
+     * @return age
      */
 
     public int getAge() {
@@ -276,7 +281,7 @@ public class LivingBeing {
     /**
      * sets the age of the creature
      *
-     * @param age
+     * @param age int value describing how old the creature is
      */
 
     public void setAge(int age) {
@@ -286,7 +291,7 @@ public class LivingBeing {
     /**
      * returns if the being is killable or not
      *
-     * @return
+     * @return isKillable
      */
 
     public boolean isIsKillable() {
@@ -296,7 +301,7 @@ public class LivingBeing {
     /**
      * Sets if the being is killable or not
      *
-     * @param isKillable
+     * @param isKillable boolean describing if the creature can be killed or not
      */
 
     public void setIsKillable(boolean isKillable) {
@@ -306,7 +311,7 @@ public class LivingBeing {
     /**
      * gets the health of the creature
      *
-     * @return
+     * @return health
      */
 
     public int getHealth() {
@@ -316,7 +321,7 @@ public class LivingBeing {
     /**
      * sets the creatures health
      *
-     * @param health
+     * @param health int value describing the overall health of the creature
      */
 
     public void setHealth(int health) {
@@ -326,7 +331,7 @@ public class LivingBeing {
     /**
      * gets the mana of the creature
      *
-     * @return
+     * @return mana
      */
 
     public int getMana() {
@@ -336,7 +341,7 @@ public class LivingBeing {
     /**
      * sets the mana of the being
      *
-     * @param mana
+     * @param mana int value describing how much magic the being can contain
      */
 
     public void setMana(int mana) {
@@ -346,7 +351,7 @@ public class LivingBeing {
     /**
      * gets the name of the being
      *
-     * @return
+     * @return name
      */
 
     public String getName() {
@@ -356,7 +361,7 @@ public class LivingBeing {
     /**
      * sets the name of the being
      *
-     * @param name
+     * @param name string holding the name of the creature
      */
 
     public void setName(String name) {
@@ -366,7 +371,7 @@ public class LivingBeing {
     /**
      * gets the experience of the being
      *
-     * @return
+     * @return experience
      */
 
     public int getExperience() {
@@ -376,7 +381,7 @@ public class LivingBeing {
     /**
      * sets the experience of the being
      *
-     * @param experience
+     * @param experience int representation of the total experience the being has
      */
 
     public void setExperience(int experience) {

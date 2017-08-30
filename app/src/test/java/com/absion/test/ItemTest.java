@@ -55,7 +55,12 @@ public class ItemTest {
      */
     @Test
     public void isItKeyItem() throws Exception {
-
+        System.out.println("is it a key item?");
+        Item instance = new Item();
+        instance.setItKeyItem(true);
+        boolean expResult = true;
+        boolean result = instance.isItKeyItem();
+        assertEquals(expResult, result);
     }
 
     /**

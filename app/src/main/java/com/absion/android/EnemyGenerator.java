@@ -77,16 +77,16 @@ public class EnemyGenerator {
         //Sets Charisma
         switch (switchController) {
             case "COMMON":
-                dog.setCharisma(rand.nextInt(2) + 1);
+                dog.setCharm(rand.nextInt(2) + 1);
                 break;
             case "ALPHA":
-                dog.setCharisma(rand.nextInt(3) + 1);
+                dog.setCharm(rand.nextInt(3) + 1);
                 break;
             case "EPIC":
-                dog.setCharisma(rand.nextInt(5) + 1);
+                dog.setCharm(rand.nextInt(5) + 1);
                 break;
             case "LEGENDARY":
-                dog.setCharisma(rand.nextInt(6) + 1);
+                dog.setCharm(rand.nextInt(6) + 1);
                 break;
         }
         
@@ -125,16 +125,16 @@ public class EnemyGenerator {
         //Sets Intelligence
         switch (switchController) {
             case "COMMON":
-                dog.setIntelligence(rand.nextInt(1) + 1);
+                dog.setIntellect(rand.nextInt(1) + 1);
                 break;
             case "ALPHA":
-                dog.setIntelligence(rand.nextInt(3) + 1);
+                dog.setIntellect(rand.nextInt(3) + 1);
                 break;
             case "EPIC":
-                dog.setIntelligence(rand.nextInt(5) + 1);
+                dog.setIntellect(rand.nextInt(5) + 1);
                 break;
             case "LEGENDARY":
-                dog.setIntelligence(rand.nextInt(8) + 1);
+                dog.setIntellect(rand.nextInt(8) + 1);
                 break;
         }
         
