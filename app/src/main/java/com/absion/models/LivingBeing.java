@@ -2,6 +2,7 @@ package com.absion.models;
 
 /**
  * Model base for every living thing in the game
+ *
  * @author Absion
  */
 public class LivingBeing {
@@ -259,13 +260,68 @@ public class LivingBeing {
     }
 
     /**
-     * sets the beings level
-     *
-     * @param level int value describing how much over all experience and ability the creature has
+     * sets the beings level according to the amount of exp it currently has
      */
 
-    public void setLevel(int level) {
-        this.level = level;
+    public void setLevel() {
+        this.level = 1;
+        if (this.experience > 2000 && this.experience < 5000) {
+            this.level = 2;
+        }
+        if (this.experience > 5000 && this.experience < 9000) {
+            this.level = 3;
+        }
+        if (this.experience > 9000 && this.experience < 15000) {
+            this.level = 4;
+        }
+        if (this.experience > 15000 && this.experience < 23000) {
+            this.level = 5;
+        }
+        if (this.experience > 23000 && this.experience < 35000) {
+            this.level = 6;
+        }
+        if (this.experience > 35000 && this.experience < 51000) {
+            this.level = 7;
+        }
+        if (this.experience > 51000 && this.experience < 75000) {
+            this.level = 8;
+        }
+        if (this.experience > 75000 && this.experience < 105000) {
+            this.level = 9;
+        }
+        if (this.experience > 105000 && this.experience < 220000) {
+            this.level = 10;
+        }
+        if (this.experience > 220000 && this.experience < 315000) {
+            this.level = 11;
+        }
+        if (this.experience > 315000 && this.experience < 445000) {
+            this.level = 12;
+        }
+        if (this.experience > 445000 && this.experience < 635000) {
+            this.level = 13;
+        }
+        if (this.experience > 635000 && this.experience < 890000) {
+            this.level = 14;
+        }
+        if (this.experience > 890000 && this.experience < 1300000) {
+            this.level = 15;
+        }
+        if (this.experience > 1300000 && this.experience < 1800000) {
+            this.level = 16;
+        }
+        if (this.experience > 1800000 && this.experience < 2550000) {
+            this.level = 17;
+        }
+        if (this.experience > 2550000 && this.experience < 1300000) {
+            this.level = 18;
+        }
+        if (this.experience > 1300000 && this.experience < 1800000) {
+            this.level = 19;
+        }
+        if (this.experience > 1800000 && this.experience < 2550000) {
+            this.level = 20;
+        }
     }
 
     /**
@@ -388,5 +444,26 @@ public class LivingBeing {
         this.experience = experience;
     }
 
-
+    @Override
+    public String toString() {
+        return "LivingBeing{" +
+                "strength=" + strength +
+                ", wisdom=" + wisdom +
+                ", dexterity=" + dexterity +
+                ", constitution=" + constitution +
+                ", intellect=" + intellect +
+                ", luck=" + luck +
+                ", charm=" + charm +
+                ", level=" + level +
+                ", experience=" + experience +
+                ", age=" + age +
+                ", isKillable=" + isKillable +
+                ", health=" + health +
+                ", mana=" + mana +
+                ", selectedSize=" + selectedSize +
+                ", selectedAlignment=" + selectedAlignment +
+                ", selectedGender=" + selectedGender +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

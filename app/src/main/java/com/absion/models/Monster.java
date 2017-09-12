@@ -2,6 +2,7 @@ package com.absion.models;
 
 /**
  * Model for every moster in the game
+ *
  * @author Absion
  */
 public class Monster extends LivingBeing {
@@ -62,4 +63,11 @@ public class Monster extends LivingBeing {
     }
 
 
+    @Override
+    public String toString() {
+        return "Monster{" +
+                "selectedType=" + selectedType +
+                ", selectedRank=" + selectedRank +
+                "} " + super.toString();
+    }
 }

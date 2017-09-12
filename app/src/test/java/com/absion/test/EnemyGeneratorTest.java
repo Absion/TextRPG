@@ -42,10 +42,9 @@ public class EnemyGeneratorTest {
         System.out.println("createCanineMonster");
         int areaLevel = 26;
         String areaType = "TestArea";
-        Monster dog;
-        dog = EnemyGenerator.createCanineMonster(areaLevel, areaType);
+        Monster dog = EnemyGenerator.createCanineMonster(areaLevel, areaType);
         System.out.println(dog.getAge() + " " + dog.getCharm() + " " + dog.getName() + " " + dog.getSelectedRank() + " " + dog.getLevel() + " " + dog.getSelectedGender());
-        
+        System.out.println(dog.toString());
     }
     
 }
